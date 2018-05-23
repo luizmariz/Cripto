@@ -24,7 +24,7 @@ for x in range(n):
         beta1 = 0
         beta2 = 1
 
-        #print a,"-",alpha1,beta1,"\n",b,"-",alpha2,beta2
+        
     
         r=1
 
@@ -35,20 +35,19 @@ for x in range(n):
             beta = beta1-(beta2*q)
         
             if r != 0:
-                #print r,q,alpha,beta
+    
                 a = b
                 b = r
                 alpha1 = alpha2
                 alpha2 = alpha
                 beta1 = beta2
                 beta2 = beta
-            #else:
-               #print r,q,"-","-","\n",b,alpha2,beta2,"\n"
+    
         
         if b != 1:
             conjunto.remove(i)
         else:
-            if alpha2%ordem in conjunto is False:
+            if alpha2%ordem not in conjunto:
                 conjunto.remove(i)
 
         #fim do AEE
